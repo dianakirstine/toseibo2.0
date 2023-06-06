@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORSIDE</title>
+    <link rel="stylesheet" href="style.css">
+<!--Link til Google fonts herunder-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+<!--Vores SEO: meta description og keywords-->
+    <meta name="description" content="Lad dig fortrylle af Dragon Scale Tekandens karakter, der forener æstetik og funktionalitet. Denne tekande det perfekte valg til daglig brug."/>
+    <meta name="keywords" content=" toseibo, håndlavet, keramik, dragon scale, tekande, te tilbehør, æstetik, design"/>
+<!--Noindex og nofollow meta tag-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+</head>
+<body>
+
+<!--NAVIGATIONSBAR-->
+    <nav>
+        <div class="menu" onclick="showMenu()">
+            <p>menu</p>
+            <img src="img/menu_icon.png" class="menuicon" alt="menu">
+        </div>
+        <div class="nav-links" id="navLinks">
+        <img src="img/close_icon.png" class="closeicon" alt="menu" onclick="hideMenu()">
+            <ul>
+                <li><a href="forside.html">FORSIDE</a></li>
+                <li><a href="om.html">OM</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="kurser.html">KERAMIKKURSUS</a></li>
+            </ul>
+        </div>
+        <a href="forside.html"><img src="img/logo_black.png" class= "logo" alt="logo"></a>
+        <a href="#"><img src="img/shoppingbag_icon.png" class="shopping_bag" alt="shopping bag"></a>
+    </nav>
+
+<!--FØRSTE DEL: INTRO TEKST-->
+<section class="teapot_1">
+    <div class="teapot_1_text">
+        <h1>DRAGON SCALE TEAPOT</h1>
+        <hr>
+        <p>Introducerer Dragon Scale Teapot fra Tōseibo - en smuk håndlavet keramisk tekande, der forener æstetisk appel med funktionalitet. Dragon Scale Teapot er omhyggeligt designet til at være et praktisk valg til dit daglige brug, hvor håndtaget er med til at sikre et behageligt og fast greb. Tekanden er skabt med en unik mørk gradient glasur som tilføjer varme og karakter, der repræsenterer dragon scale. Uanset om du er en te-drikker eller bare sætter pris på smukt design, er Dragon Scale Teapot garanteret at hæve din oplevelse til det næste niveau.</p>
+    </div>
+<!--ANDEN DEL: IMG CAROUSEL + IMG NAV | KILDE: https://www.youtube.com/watch?v=McPdzhLRzCg-->
+    <div class="teapot_container">
+        <div class="slider_wrapper">
+            <div class="slider">
+                <img id="slide_1" src="img/teapot_1.jpg" alt="dragon scale teapot">
+                <img id="slide_2" src="img/teapot_2.jpg" alt="dragon scale teapot">
+                <img id="slide_3" src="img/teapot_3.jpg" alt="dragon scale teapot">
+                <img id="slide_4" src="img/teapot_4.jpg" alt="dragon scale teapot">
+            </div>
+            <div class="slider_nav">
+                <a href="#slide_1"></a>
+                <a href="#slide_2"></a>
+                <a href="#slide_3"></a>
+                <a href="#slide_4"></a>
+            </div>
+        </div>
+    </div>
+<!--TREDJE DEL: ANTAL + TILFØJ TIL KURV | KILDE: https://www.youtube.com/watch?v=Pt8f3GwD3N8-->
+    <div class="shopping_container">
+        <div class="counter_container">
+            <span id="counter">1</span>
+            <a href="#" class="button">Tilføj til kurv</a>
+        </div>
+        <div class="teapot_4">
+            <hr>
+            <h2>PRAKTISK INFO</h2>
+            <p>Mål: 0 x 0 cm. Denne tekande er ikke egnet til opvaske-maskinen, men bør vaskes i hånden for at vedligeholde kvaliteten.</p>
+        </div>   
+    </div>
+
+
+<!--FJERDE DEL: FLERE PRODUKTER-->
+    <div class="more_products">
+        <div class="more_text">
+            <hr>
+            <h2>FLERE PRODUKTER</h2>
+        </div>
+        <div class="more_img">
+            <img src="img/more_1.jpg" class="more_img1" alt="flere keramik produkter fra Toseibo">
+            <img src="img/more_2.jpg" class="more_img2" alt="flere keramik produkter fra Toseibo">
+            <img src="img/more_3.jpg" class="more_img3" alt="flere keramik produkter fra Toseibo">
+            <img src="img/more_4.jpg" class="more_img4" alt="flere keramik produkter fra Toseibo">
+        </div>
+    </div>
+</section>
+
+<!--FOOTER-->
+    <footer>
+        <img class="footerlogo" src="img/logo_white.png" alt="logo">
+        <div class="footer-visit"> 
+            <h1>BESØG STUDIO</h1>
+                <p>Brolæggerstræde 6, kld. th, 1211<br>København</p>
+                <p>Ons - Lør: 12:00 - 17:00<br>Søn - Tirs: Lukket</p>
+        </div>
+        <div class="footer-service">
+            <h1>SERVICE</h1>
+                <p>Levering og retur</p>
+                <p>Handelsbetingelser</p>
+        </div>
+        <div class="footer-contact">
+                <h1>TŌSEIBO</h1>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="footer-SoMe">
+            <a href="https://www.instagram.com/toseibo/" target="_blank"><img src="img/igicon_white.png" alt="igikon"></a>
+            <a href="https://www.facebook.com/profile.php?id=100058271636733" target="_blank"><img src="img/fbicon_white.png" alt="fbikon"></a>
+        </div>
+    </footer>
+
+<!--JAVASCRIPT LINKING-->
+    <script src="main.js"></script>
+
+</body>
+</html>

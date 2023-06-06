@@ -1,0 +1,1887 @@
+@font-face {
+    font-family: semplicita_pro_reg;
+    src: url(./fonts/semplicitapro.otf);
+}
+
+@font-face {
+    font-family: semplicita_pro_bold;
+    src: url(./fonts/semplicitapro-bold.otf);
+}
+
+:root {
+    --primary-color: #C1B4A0;
+    --secondary-color: #FFFFFF;
+    --tertiary-color: #000000;
+    --quarternary-color: #59503D;
+    --font-set: 'Bellefair', serif;
+    --second-font-set: "semplicita_pro_reg";
+    --third-font-set: "semplicita_pro_bold";
+}
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url(img/background.png);
+        font-family: var(--font-set);
+    }
+
+/*MOBILE VERSION*/
+
+/*Font styling*/
+    h1{
+        font-size: 27px;
+        font-family: var(--font-set);
+        text-transform: uppercase;
+        line-height: 30px;
+        font-weight: 400;
+        margin: 8px 0px;
+    }
+
+    h2{
+        font-size: 11px;
+        font-family: var(--third-font-set);
+        text-transform: uppercase;
+        line-height: 20px;
+    }
+
+    p{
+        font-size: 11px;
+        line-height: 20px;
+        font-family: var(--second-font-set);
+    }
+
+/*Button styling*/
+    .button{
+        display: block;
+        background-color: transparent;
+        border: 1px solid #000;
+        padding: 8px 20px 8px 10px;
+        text-decoration: none;
+        font-family: var(--second-font-set);
+        color: var(--tertiary-color);
+        font-size: 11px;
+        margin-top: 15px;
+        width: 50px;
+    }
+
+    .button:hover{
+        background-color: var(--quarternary-color);
+        border: 1px solid transparent;
+        color: var(--secondary-color);
+    }
+
+/*Line styling*/
+    hr{
+        border: 0.5px solid #000;
+        margin: 1px;
+        margin-bottom: 30px;
+        }
+  
+
+/*NAVIGATIONSBAR*/
+
+/*Logo */
+    .logo{
+        width: 100px;
+        padding: 15px 10px 0px 0px;
+    }
+
+/*Navigationbar*/
+/*Der er tilføjet en css animation. Kilde: https://www.w3schools.com/css/css3_animations.asp*/
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background-image: url(img/background.png);
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        animation: fall 2.5s forwards;
+    }
+
+    @keyframes fall{
+        from{
+            transform: translateY(-100%);
+        }
+
+        to{
+            transform: translateY(0);
+        }
+    }
+
+/*Links i navigationbar*/
+    .nav-links ul{
+        display: block;
+        padding: 0;
+    }
+
+    .nav-links ul li{
+        display: block;
+        list-style: none;
+        text-decoration: none;
+        padding: 25px 0px;
+    }
+
+    .nav-links ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 27px;
+        font-family: var(--font-set);
+    }
+
+/*Hover effekt på burger menuen*/
+    ul li::after{
+        content:'';
+        width: 0%;
+        height: 1px;
+        background: var(--secondary-color);
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    ul li:hover::after{
+        width: 60px;
+    }
+
+/*Navigationbar slide*/
+    .nav-links{
+        background-color: #59503D;
+        position: absolute;
+        min-height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    @media screen {
+        html, body {overflow-x: hidden;}
+    }
+
+/*Ikon (burgermenu)*/
+    .menuicon{
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .closeicon{
+        display: block;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        padding: 24px 36px;
+    }
+
+    .menu{
+        display: flex;
+        color: #000;
+        cursor: pointer;
+        padding: 20px 0px 20px 37px;
+    }
+
+    .menu p{
+        font-size: 14px;
+        color: #000;
+        padding: 0px 5px 0px 0px;
+        font-family: "bellefair";
+        margin: 0;
+    }
+
+/*Ikon (shopping bag)*/
+    .shopping_bag{
+        width: 22px;
+        height: 22px;
+        padding: 20px 37px 20px 0px; 
+    }
+
+
+/*LANDINGVIDEO*/
+
+/*Der er tilføjet en css animation. Kilde: https://www.w3schools.com/css/css3_animations.asp*/
+    .landing_video{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-60%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.80);
+        animation: fadein ease-in 1.5s forwards;
+    }
+
+    @keyframes fadein{
+        from{
+            opacity: 0;
+        }
+
+        to{
+            opacity: 100%;
+        }
+    }
+
+/*Styling af tekst og logo*/
+    .video_content{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 0px 37px;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-60%, -50%);
+        animation: fadein ease-in 2s forwards;
+    }
+
+    .video_content p{
+        text-align: center;
+    }
+
+    .video_content img{
+        width: 150px;
+    }
+
+    .video_content p{
+        color: var(--secondary-color);
+    }
+
+/*Ikon (close)*/
+/*Der er tilføjet en css animation. Kilde: https://www.w3schools.com/css/css3_animations.asp*/
+    .closeicon_landing_page{
+        display: flex;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        padding: 24px 36px;
+        animation: slidein ease-in 1.5s forwards; 
+    }
+
+    @keyframes slidein{
+        from{
+            transform: translateX(-100%);
+        }
+
+        to{
+            transform: translateX(0);
+        }
+    }
+
+
+/*FORSIDE*/
+
+/*Styling til første sektion: OPDAG TOSEIBOS FILOSOFI*/
+    .frontpage_1{
+        margin: 0;
+    }
+
+    .frontpage_video{
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        filter: brightness(0.90);
+        animation: fadein ease-in 1.5s forwards;
+    }
+
+    .frontpage_1_content{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        color: var(--secondary-color);
+    }
+
+    .frontpage_1_content hr{
+        width: 35%;
+        border: 0.5px solid var(--secondary-color);
+    }
+
+    .hero_button{
+        display: block;
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 8px 20px 8px 10px;
+        text-decoration: none;
+        font-family: var(--second-font-set);
+        color: var(--secondary-color);
+        font-size: 11px;
+        margin-top: 15px;
+        width: 50px;
+    }
+    
+    .hero_button:hover{
+        background-color: var(--quarternary-color);
+        border: 1px solid transparent;
+    }
+
+/*Styling til anden sektion: NATUREN MØDER KUNSTEN*/
+    .frontpage_2{
+        margin: 50px 37px;
+    }
+
+    .frontpage_2_img1{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .frontpage_2_img2{
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .frontpage_2_content hr{
+        width: 40%;
+    }
+
+/*Styling til trejde sektion: UDFORSK HÅNDLAVET KERAMIK*/
+    .frontpage_3{
+        margin: 100px 37px;
+    }
+
+    .frontpage_3_content{
+        padding-bottom: 10px;
+    }
+
+    .frontpage_3_product_img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .frontpage_3_product_text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .frontpage_3_product_text h1{
+        font-size: 11px;
+        line-height: 20px;
+        margin: 2px;
+    }
+
+    .frontpage_3_product_text hr{
+        border: 0.5px solid var(--secondary-color);
+        margin: 0;
+    }
+
+    .frontpage_3_product1{
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .frontpage_3_product2{
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .frontpage_3_product3{
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .frontpage_3_product4{
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .frontpage_3_content hr{
+        width: 35%;
+    }
+
+
+
+
+/*OM*/
+
+/*Styling af første sektion: Bag Toseibo*/
+    .about_1{
+        margin: 100px 37px;
+    }
+
+    .about_1_img1{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .about_1_img2{
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        padding-top: 10px;
+    }
+
+    .about_1 hr{
+        width: 55%;
+        margin-bottom: 20px;
+    }
+
+/*Styling af anden sektion: Historie og filosofi*/
+    .about_2{
+        margin: 50px 37px;
+    }
+
+    .about_2_img1{
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        padding-bottom: 20px;
+    }
+
+    .about_2 hr{
+        width: 100%;
+    }
+
+/*Styling af tredje sektion: Fra den jordnære ler til de rige glasurer*/
+    .about_3{
+        margin: 100px 37px;
+    }
+
+    .about_3_img1{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .about_3_img2{
+        width: 100%;
+        object-fit: cover;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .about_3 hr{
+        width: 45%;
+    }
+
+
+/*SHOP*/
+
+    .wrapper{
+        margin: 100px 37px;
+    }
+
+    .shop_img{
+        object-fit: cover;
+        height: 80vh;
+        width: 100%;
+    }
+
+    .shop_content{
+        position: relative;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .shop_text{
+        position: absolute;
+        left: 20%;
+        top: 10%;
+        width: 50%;
+        transform: translate(-20%, -10%);
+        color: var(--secondary-color);
+    }
+
+    .shop_text hr{
+        border: 0.5px solid var(--secondary-color);
+    }
+
+    .shop_content p{
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        width: 80%;
+        transform: translate(-50%, -80%);
+        color: var(--secondary-color);
+    }
+
+/*Styling af footeren til shop*/
+    .shop_footer{
+        padding: 50px 37px 80px 37px;
+        background-color: #212121;
+        color: var(--secondary-color);
+        text-align: center;
+        margin: 100px -37px -100px -37px;
+    }
+
+
+/*PRODUCTS*/ 
+
+/*Styling: first section*/
+    .products_ceramic{
+        margin: 100px 37px;
+    }
+
+    .products_ceramic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product_text{
+        width: 40%;
+        color: var(--secondary-color);
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .product_text h1{
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .product_text hr{
+        width: 80%;
+        border: 0.5px solid #fff;
+        text-align: center;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .intro_text p{
+        margin-bottom: 60px;
+    }
+
+    .intro_text hr{
+        width: 45%;
+    }
+
+    /*Styling af tekster: placerer dem ovenpå billedet*/
+    .dragon_1{
+        position: relative;
+    }
+
+    .dragon_2{
+        position: relative;
+    }
+
+    .dragon_3{
+        position: relative;
+    }
+
+    .dragon_4{
+        position: relative;
+    }
+
+
+/*DRAGON SCALE TEAPOT*/  
+
+/*Styling first section - KILDE: https://www.youtube.com/watch?v=McPdzhLRzCg*/
+    .teapot_1{
+        margin: 100px 37px;
+    }
+
+    .teapot_container{
+        margin-top: 25px;
+    }
+
+    .teapot_1_text hr{
+        width: 32%;
+    }
+
+/*Styling: CAROUSEL*/
+    .slider_wrapper{
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+    }
+
+    .slider{
+        display: flex;
+        aspect-ratio: 5 / 5.5;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        border: 1px solid #000; 
+    }
+
+    .slider img{
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+
+/*CAROUSEL NAV BUTTONS*/
+    .slider_nav{
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .slider_nav a{
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 100%;
+        background-color: var(--tertiary-color);
+        opacity: 0.50;
+        transition: opacity ease 250ms;
+    }
+
+    .slider_nav a:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+
+/*Styling: add to cart*/
+    .shopping_container .button{
+        padding: 8px 20px 8px 20px;
+        margin-right: 90px;
+        margin-top: 0;
+    }
+
+    #add_btn:hover{
+        background-color: var(--quarternary-color);
+        border: 1px solid transparent;
+        color: var(--secondary-color);
+    }
+
+    .shopping_container{
+        padding-top: 10px;
+        transition: .2s opacity;
+    }
+
+    .counter_container{
+        display: flex;   
+        position: relative;
+        justify-content: space-between;
+        margin-top: 55px;
+    }
+
+    #counter{
+        border: 1px solid #000;
+        width: 2.5rem;
+        height: 2.7rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*FOURTH SECTION: info + more proucts*/
+/*Styling: practical info*/
+    .teapot_4{
+        margin-top: 80px;
+    }
+
+    .teapot_4 hr{
+        position: absolute;
+        width: 35px;
+        margin-top: 10px;
+    }
+
+    .teapot_4 h2{
+        position: relative;
+        overflow: hidden;
+        padding-left: 50px;
+    }
+
+    .more_products{
+        margin-top: 37px;
+    }
+
+    .more_img{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .more_img img{
+        width: 100%;
+        object-fit: cover;
+        border: 1px solid #000;
+    }
+
+    .more_text h2{
+        position: relative;
+        overflow: hidden;
+        padding-left: 50px;
+    }
+
+    .more_text hr{
+        position: absolute;
+        width: 35px;
+        margin-top: 10px;
+    }
+
+/*Styling grid*/   
+    .more_img1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .more_img2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .more_img3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .more_img4{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+
+    
+/*KERAMIK KURSER*/
+
+/*Styling af første sektion: hero video + tekst*/
+    .workshop_1{
+        margin: 0;
+    }
+
+  .workshop_video{
+        display: block;
+        width: 100vw;
+        height: 90vh;
+        object-fit: cover;
+        filter: brightness(0.80);
+        animation: fadein ease-in 1.5s forwards;
+    }
+
+  .workshop_1 h1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+  .workshop_1 hr{
+        border: 0.5px solid #fff;
+        position: absolute;
+        left: 50%;
+        top: 57%;
+        transform: translate(-50%, -57%);
+        width: 50%;
+    }
+
+/*Styling af anden sektion: Oplev kursus*/
+  .workshop_2{
+        margin: 37px;
+        padding-bottom: 45px;
+    }
+
+  .workshop_2_img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        padding-bottom: 15px;
+    }
+
+  .workshop_2 h1{
+        padding-right: 80px;
+    }
+
+  .workshop_2 hr{
+        width: 55%;
+    }
+
+/*Styling af tredje sektion: Praktisk info*/
+    .workshop_3{
+        margin-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    .workshop_3 h2{
+        position: relative;
+        overflow: hidden;
+        padding-left: 30px;
+    }
+
+    .workshop_3 hr{
+        position: absolute;
+        width: 18px;
+        margin-top: 10px;
+    }
+
+    .workshop_3 p{
+        line-height: 30px;
+    }
+
+
+/*KONTAKT*/
+
+    .contact-form{
+            margin: 100px 37px;
+    }
+        
+    form{
+        width: 90%;
+        min-width: 255px;
+        margin-top: 40px;
+    }
+
+    .contact-form hr{
+        width: 40%;
+    }
+  
+/*Kontaktformularens tekstbox*/
+    .input-group{
+        margin-bottom: 20px;
+    }
+  
+/*Kontaktformularens styling og tekst styling*/
+    input, textarea{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #000000;
+        color: #000000;
+        background: transparent;
+        font-size: 11px;
+        font-family: var(--second-font-set);
+        outline: none;
+    }
+
+    textarea{
+        height: 20vh;
+    }
+
+/*Kontaktformularens "Send besked"-knap styling*/
+    form .button{
+        width: 70px;
+    }
+    
+
+/*FOOTER*/
+
+    footer{
+        padding: 50px 37px 80px 37px;
+        margin: 0;
+        background-color: #212121;
+        color: var(--secondary-color);
+        text-align: center;   
+    }
+
+    .footerlogo{
+        width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer h1{
+        padding-top: 40px;
+        font-size: 20px;
+        
+    }
+
+    footer p{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footervisit{
+        padding-bottom: 50px;
+    }
+
+    .footer-service p:hover{ 
+        color: var(--primary-color);
+    }
+
+    footer a{
+        color: var(--secondary-color);
+        font-family: var(--second-font-set);
+        text-decoration: none;
+        font-size: 11px;
+    }
+
+    footer a:hover{
+        color: var(--primary-color);
+    }
+
+
+    .footer-SoMe img{
+        width: 30px;
+        padding: 0;
+        padding-top: 50px;
+        
+    }
+
+
+
+/*DESKTOP VERSION*/
+
+@media screen and (min-width: 1280px) {
+
+/*Font styling*/
+    h1{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    h2{
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 25px; 
+    }
+
+/*Button styling*/
+    .button{
+        padding: 10px 20px 10px 15px;
+        font-size: 14px;
+        margin-top: 25px;
+        width: 80px;
+    }
+
+/*Line styling*/
+    hr{
+        margin-bottom: 40px;
+    }
+
+
+/*NAVIGATIONSBAR*/
+    
+/*Logo*/
+    .logo{
+        width: 150px;
+    }
+
+/*Ikon (burgermenu)*/
+    .menuicon{
+        width: 22px;
+        height: 22px;
+    }
+    
+    .closeicon{
+        width: 18px;
+        height: 18px;
+        padding: 20px 0px 20px 60px;
+    }
+    
+    .menu{
+        padding: 20px 0px 20px 60px;
+    }
+
+    .menu p{
+        font-size: 20px;
+    }
+
+    
+/*Ikon (shopping bag)*/
+    .shopping_bag{
+        width: 28px; 
+        height: 28px;  
+        padding: 20px 60px 20px 0px; 
+    }
+
+    
+/*LANDING VIDEO*/
+
+    .video_content img{
+        width: 250px;
+    }
+
+    .closeicon_landing_page{
+        width: 18px;
+        height: 18px;
+        padding: 24px 60px;
+    }
+
+
+/*FORSIDE*/
+
+/*Styling til første sektion: Opdag Toseibos Filosofi*/
+    .frontpage_1{
+        margin: 40px 60px;
+    }
+    
+    .frontpage_video{
+        right: 0;
+        width: 100%;
+    }
+    
+    .frontpage_1_content{
+        position: absolute;
+        left: 25%;
+        top: 60%;
+        width: 30%;
+    }
+    
+    .frontpage_1_content hr{
+        width: 35%;
+    }
+
+    .hero_button{
+        padding: 10px 20px 10px 15px;
+        font-size: 14px;
+        margin-top: 25px;
+        width: 80px;
+    }
+    
+/*Styling til anden sektion: Naturen møder kunsten*/
+    .frontpage_2{
+        margin: 100px 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr) ;
+        gap: 20px;
+    }
+
+    .frontpage_2_img1{
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .frontpage_2_img2{
+        height: 40vh;
+        padding: 0;
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .frontpage_2_content{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+/*Styling til anden tredje sektion: Udforsk håndlavet keramik*/
+    .frontpage_3{
+        margin: 150px 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+
+    .frontpage_3_content{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        padding: 0;
+    }
+
+    .frontpage_3_product1{
+        margin: 0;
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .frontpage_3_product2{
+        margin: 0;
+        grid-column-start: 9;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .frontpage_3_product3{
+        margin: 0;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .frontpage_3_product4{
+        margin: 0;
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+    .frontpage_3_product_text h1{
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .frontpage_3_content hr{
+        width: 55%;
+    }
+
+
+/*OM*/
+
+/*Styling af første sektion: Bag Toseibo*/
+    .about_1{
+        margin: 120px 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+
+    .about_1_content{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .about_1_img1{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 100%;
+    }
+
+    .about_1_img2{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 0px;
+        height: 40vh;
+    }
+
+    .about_1_text{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .about_1 hr{
+        width: 80%;
+    }
+
+/*Styling af anden sektion: Historie og filosofi*/
+    .about_2{
+        margin: 150px 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+
+    .about_2_img1{
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 50vh;
+    }
+    
+    .about_2_content{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .about_2_text1{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        padding: 0px 20px 0px 0px;
+    }
+
+    .about_2_text2{
+        grid-column-start: 6;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .about_2 hr{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+/*Styling af tredje sektion: Fra den jordnære ler til de rige glasurer*/
+    .about_3{
+        margin: 150px 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+
+    .about_3_img1{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 100vh;
+    }
+
+    .about_3_img2{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 0;
+    }
+
+    .about_3_content{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+
+/*SHOP*/
+
+    .shop_content{
+        position: relative;
+        width: 100%;
+        margin: 40px 0px 40px 60px;
+        flex-shrink: 0;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+    }
+
+    .shop_img{
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .shop_text{
+        left: 10%;
+        width: 15%;
+        transform: translate(-10%, -10%);
+        color: var(--secondary-color);
+    }
+
+    .shop_content p{
+        left: 10%;
+        transform: translate(-10%, -80%);
+        color: var(--secondary-color);
+        width: 20%;
+    }
+
+/*Styling af footer til SHOP*/
+    .shop_footer{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 130px 100px 80px 100px;
+        text-align: center;
+    }
+
+    .shop_footer .footerlogo{
+        display: none;
+    }
+
+    .shop_footer h1{
+        padding-top: 0px;
+    }
+
+    .shop_footer p{
+        text-align: center;
+    }
+
+    .shop_footer .footer-SoMe{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 80px;
+    }
+
+
+/*PRODUCTS*/ 
+
+/*Styling: text section*/  
+    .products_ceramic{
+        margin: 120px 60px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+    }
+
+    .intro_text{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+/*Styling grid: Masonry*/   
+    .dragon_1{
+        grid-column-start: 6;
+        grid-column-end: 10;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        
+    }
+
+    .dragon_2{
+        grid-column-start: 10;
+        grid-column-end: 13;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        
+    }
+
+    .dragon_3{
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .dragon_4{
+        grid-column-start: 8;
+        grid-column-end: 12;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+    .intro_text hr{
+        width: 180px;
+    }
+
+    .product_text{
+        width: 35%;
+    }
+
+
+/*DRAGON SCALE TEAPOT*/  
+
+/*INTRO TEXT*/
+    .teapot_1{
+        margin: 120px 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+
+    .teapot_1_text{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .counter_container{
+        margin-top: 0;
+    }
+
+    .shopping_container{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        padding: 0;
+    }
+
+/*PRODUCT CAROUSEL | KILDE: https://www.youtube.com/watch?v=McPdzhLRzCg*/
+    .teapot_container{
+        grid-column-start: 6;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        margin: 0;
+    }
+
+    .teapot_4{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    .slider_nav{
+        grid-column-start: 7;
+        grid-column-end: 10;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+
+/*MORE PRODUCTS*/
+    .shopping_container .button{
+        padding: 8px 40px 8px 40px;
+    }
+
+
+    .more_products{
+        width: 100%;
+        grid-column-start: 6;
+        grid-column-end: 11;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    .more_img{
+        width: 110px;
+        display: flex;
+    }
+
+/*KERAMIK KURSER*/
+
+/*Styling af første sektion: hero video + tekst*/
+    .workshop_1{
+        margin: 40px 60px;
+    }
+
+    .workshop_video{
+        right: 0;
+        width: 100%;
+    }
+
+    .workshop_1 h1{
+        width: 30%;
+    }
+
+    .workshop_1 hr{
+        width: 20%;
+    }
+
+/*Styling af anden sektion: Oplev kursus*/
+    .workshop_2{
+        margin: 160px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+        padding: 0;
+    }
+
+    .workshop_2_img{
+        height: 100%;
+        object-fit: contain;
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding: 0;
+    }
+
+    .workshop_2_content{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .workshop_2 hr{
+        width: 75%;
+    }
+
+/*Styling af tredje sektion: Praktisk info*/
+    .workshop_3{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .workshop_3 hr{
+        margin-top: 25px;
+        width: 18px;
+    }
+
+
+/*CONTACT PAGE*/
+
+/*Styling af linje og tekster*/
+    .contact-form{
+        display: flex;
+        margin: 120px 160px;
+    }
+
+    .contact-text p{
+        margin-right: 250px;
+    }
+
+    .contact-form hr{
+        width: 25%;
+    }
+
+/*Styling  af kontaktformular*/
+    form{
+        width: 100%;
+        margin: 0;
+    }
+
+    input, textarea{
+        font-size: 14px;
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .row .input-group{
+        flex-basis: 43%;
+    }
+
+    form .button{
+        width: 80px;
+    }
+
+
+/*FOOTER*/
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: left;
+        padding: 50px 60px;
+    }
+        
+    .footerlogo {
+        width: 100px;
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+        
+    .footervisit {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+        
+    .footer-service{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .footer-contact{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .footer-SoMe {
+        padding-left: 280px;
+        padding-top: 65px;
+        align-items: center;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+        
+    .footer-SoMe img {
+        width: 30px;
+        padding: 0;
+    }
+
+    footer a{
+        font-size: 14px;
+    }
+
+    footer p{
+        text-align: left;
+    }
+
+}
+
+
+@media screen and (min-width: 1366px) {
+
+/*FORSIDE*/
+
+/*Styling til trejde sektion: Udforsk håndlavet keramik*/
+    .frontpage_3_content hr{
+        width: 50%;
+    }
+
+
+/*OM*/
+
+/*Styling af første sektion: Bag Toseibo*/
+    .about_1 hr{
+        width: 73%;
+    }
+
+/*Styling af anden sektion: Historie og filosofi*/
+    .about_2 hr{
+        width: 73%;
+    }
+
+    .about_2_text1{
+        padding: 0;
+    }
+
+/*Styling af tredje sektion: Fra den jordnære ler til de rige glasurer*/
+    .about_3_content hr{
+        width: 42%;
+    }
+
+
+/*DRAGON SCALE TEAPOT*/  
+
+/*INTRO TEXT*/
+    .teapot_1_text hr{
+        width: 100%;
+    }
+
+    .shopping_container{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        padding-top: 10%;
+    }
+
+    .teapot_4{
+        margin-top: 15%;
+    }
+
+/*MORE PRODUCTS*/
+    .more_img{
+        width: 120px;
+    }
+
+
+/*KERAMIK KURSER*/
+
+/*Styling af tredje sektion: Praktisk info*/
+    .workshop_2_content hr{
+        width: 70%;
+    }
+
+
+/*CONTACT PAGE*/
+
+/*Styling  af kontaktformular*/
+    .row .input-group{
+        flex-basis: 44%;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+/*FORSIDE*/
+
+/*Styling til anden sektion: Naturen møder kunsten*/
+    .frontpage_2_content hr{
+        width: 36%;
+    }
+
+/*Styling til trejde sektion: Udforsk håndlavet keramik*/
+    .frontpage_3_content hr{
+        width: 46%;
+    }
+
+
+/*OM*/
+
+/*Styling af første sektion: Bag Toseibo*/
+    .about_1 hr{
+        width: 69%;
+    }
+
+/*Styling af anden sektion: Historie og filosofi*/
+    .about_2 hr{
+        width: 68%;
+    }
+
+/*Styling af tredje sektion: Fra den jordnære ler til de rige glasurer*/
+    .about_3_content hr{
+        width: 85%;
+    }
+
+
+/*DRAGON SCALE TEAPOT*/  
+
+/*INTRO TEXT*/
+    .teapot_1_text hr{
+        width: 90%;
+    }
+
+    .shopping_container{
+        padding-top: 2%;
+    }
+
+
+/*MORE PRODUCTS*/
+    .more_img{
+        width: 128px;
+    }
+
+
+/*KERAMIK KURSER*/
+
+/*Styling af tredje sektion: Praktisk info*/
+    .workshop_2_content hr{
+        width: 64%;
+    }
+
+
+/*CONTACT PAGE*/
+
+/*Styling  af kontaktformular*/
+    .row .input-group{
+        flex-basis: 44.5%;
+    }
+}
+
+
+
+@media screen and (min-width: 1536px) {
+/*Font styling*/
+    h1{
+        font-size: 36px;
+        line-height: 41px;
+    }
+
+    h2{
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    p{
+        font-size: 15px;
+        line-height: 26px; 
+    }
+
+/*Button styling*/
+    .button{
+        padding: 12px 22px 12px 17px;
+        font-size: 15px;
+    }
+
+
+/*FORSIDE*/
+
+/*Styling til første sektion: Opdag Toseibos Filosofi*/
+    .frontpage_1_content hr{
+        width: 32%;
+    }
+
+/*Styling til anden sektion: Naturen møder kunsten*/
+    .frontpage_2_content hr{
+        width: 34%;
+    }
+
+/*Styling til anden tredje sektion: Udforsk håndlavet keramik*/
+    .frontpage_3_content hr{
+        width: 44%;
+    }
+
+
+/*OM*/
+
+/*Styling af første sektion: Bag Toseibo*/
+    .about_1 hr{
+        width: 65%;
+    }
+
+/*Styling af anden sektion: Historie og filosofi*/
+    .about_2 hr{
+        width: 64%;
+    }
+
+/*Styling af tredje sektion: Fra den jordnære ler til de rige glasurer*/
+    .about_3_content hr{
+        width: 80%;
+    }
+
+
+/*DRAGON SCALE TEAPOT*/  
+
+/*INTRO TEXT*/
+    .teapot_1_text hr{
+        width: 88%;
+    }
+
+    .shopping_container{
+        padding-top: 0%;
+    }
+
+    .teapot_4 h1{
+        font-size: 15px;
+    }
+
+/*MORE PRODUCTS*/
+    .shopping_container .button {
+        padding: 8px 60px 8px 60px;
+    }
+
+    .more_img{
+        width: 140px;
+    }
+
+    .more_text h1{
+        font-size: 15px;
+    }
+
+
+/*CONTACT PAGE*/
+
+/*Styling  af kontaktformular*/
+    .row .input-group{
+        flex-basis: 45%;
+    }
+
+
+/*FOOTER*/
+
+    .footer-SoMe {
+        padding-left: 310px;
+    }
+        
+    .footer-SoMe img {
+        width: 32px;
+    }
+
+    footer a{
+        font-size: 15px;
+    }
+
+}

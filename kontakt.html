@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toseibo | Kontakt og besøg keramik studiet</title>
+    <link rel="stylesheet" href="style.css">
+<!--Link til Google fonts herunder-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+<!--Vores SEO: meta description og keywords-->
+    <meta name="description" content="Udforsk Toseibos kollektioner, besøg studiet i København, og lad dig inspirere af vores naturlige, håndlavet og unikke keramikkreationer."/>
+    <meta name="keywords" content="toseibo, København, østasiatisk, keramik, æstetik, oplevelser, kurser, besøg, studie, begivenheder"/>
+<!--Noindex og nofollow meta tag-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+</head>
+<body>
+
+<!--NAVIGATIONSBAR-->
+    <nav>
+        <div class="menu" onclick="showMenu()">
+            <p>menu</p>
+            <img src="img/menu_icon.png" class="menuicon" alt="menu">
+        </div>
+        <div class="nav-links" id="navLinks">
+        <img src="img/close_icon.png" class="closeicon" alt="menu" onclick="hideMenu()">
+            <ul>
+                <li><a href="forside.html">FORSIDE</a></li>
+                <li><a href="om.html">OM</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="kurser.html">KERAMIKKURSUS</a></li>
+            </ul>
+        </div>
+        <a href="forside.html"><img src="img/logo_black.png" class= "logo" alt="logo"></a>
+        <a href="#"><img src="img/shoppingbag_icon.png" class="shopping_bag" alt="shopping bag"></a>
+    </nav>
+
+<!--KONTAKTFORMULAR | Kilde: https://www.youtube.com/watch?v=524ycUqs3f0-->
+    <section class="contact-form">
+        <div class="contact-text">
+            <h1>Kontakt</h1>
+            <hr>
+            <p>Har du spørgsmål angående keramikprodukter eller kurser, kan du kontakte Tōseibo via e-mail på <u>info@toseibo.dk</u> eller på telefonnummeret 0045 60806080. Du kan også benytte dig af kontaktformularen her på siden.<br>
+            <br>Ønsker du at opleve og udforske Tōseibos keramik i person, har Tōseibos studie åbent fra onsdag til lørdag i åbningstider fra kl. 12:00 til kl. 17:00.
+            </p>
+        </div>
+        <form>
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" placeholder="Fornavn" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Efternavn" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="E-mail" required>
+            </div>
+            <div class="input-group">
+                <textarea placeholder="Skriv din besked"></textarea>
+            </div>
+            <a href="#" class="button">Send besked</a>
+        </form>
+    </section>
+
+<!--FOOTER-->
+    <footer>
+        <img class="footerlogo" src="img/logo_white.png" alt="logo">
+        <div class="footer-visit"> 
+            <h1>BESØG STUDIO</h1>
+                <p>Brolæggerstræde 6, kld. th, 1211<br>København</p>
+                <p>Ons - Lør: 12:00 - 17:00<br>Søn - Tirs: Lukket</p>
+        </div>
+        <div class="footer-service">
+            <h1>SERVICE</h1>
+                <p>Levering og retur</p>
+                <p>Handelsbetingelser</p>
+        </div>
+        <div class="footer-contact">
+                <h1>TŌSEIBO</h1>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="footer-SoMe">
+            <a href="https://www.instagram.com/toseibo/" target="_blank"><img src="img/igicon_white.png" alt="igikon"></a>
+            <a href="https://www.facebook.com/profile.php?id=100058271636733" target="_blank"><img src="img/fbicon_white.png" alt="fbikon"></a>
+        </div>
+    </footer>
+
+<!--JAVASCRIPT LINKING-->
+    <script src="main.js"></script>
+
+</body>
+</html>
