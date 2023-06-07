@@ -79,9 +79,15 @@
         border: 0.5px solid #000;
         margin: 1px;
         margin-bottom: 30px;
-        }
+    }
   
+/*Styling af a-tags (klikfunktion til tekster)*/
+    a{
+        text-decoration: none;
+        color: var(--secondary-color);
+    }
 
+    
 /*NAVIGATIONSBAR*/
 
 /*Logo */
