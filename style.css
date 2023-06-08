@@ -629,81 +629,73 @@
 /*DRAGON SCALE TEAPOT*/  
 
 /*Styling first section - KILDE: https://www.youtube.com/watch?v=McPdzhLRzCg*/
-    .teapot_1{
-        margin: 100px 37px;
-    }
+.teapot_1{
+    margin: 100px 37px;
+  }
 
-    .teapot_container{
-        margin-top: 25px;
-    }
-
-    .teapot_1_text hr{
-        width: 32%;
-    }
+  .teapot_container{
+    margin-top: 100px;
+  }
 
 /*Styling: CAROUSEL*/
-    .slider_wrapper{
-        position: relative;
-        max-width: 48rem;
-        margin: 0 auto;
-    }
+  .slider_wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
 
-    .slider{
-        display: flex;
-        aspect-ratio: 5 / 5.5;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        border: 1px solid #000; 
-    }
+  .slider{
+    display: flex;
+    aspect-ratio: 5 / 6;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border: 1px solid #000;  
+    z-index: 1;
+  }
 
-    .slider img{
-        flex: 1 0 100%;
-        scroll-snap-align: start;
-        object-fit: cover;
-    }
+  .slider img{
+    width: 100px;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    transition: all 0.2s;
+    overflow-x: hidden;
+  }
 
 /*CAROUSEL NAV BUTTONS*/
     .slider_nav{
-        display: flex;
-        column-gap: 1rem;
-        position: absolute;
-        bottom: -25px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    align-items: center;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
     }
 
     .slider_nav a{
-        width: 0.5rem;
-        height: 0.5rem;
-        border-radius: 100%;
-        background-color: var(--tertiary-color);
-        opacity: 0.50;
-        transition: opacity ease 250ms;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    background-color: var(--tertiary-color);
+    opacity: 0.50;
+    transition: opacity ease 250ms;
     }
 
     .slider_nav a:hover{
-        opacity: 1;
-        cursor: pointer;
+    opacity: 1;
+    cursor: pointer;
     }
-    
+
 
 /*Styling: add to cart*/
-    .shopping_container .button{
-        padding: 8px 20px 8px 20px;
-        margin-right: 90px;
-        margin-top: 0;
-    }
-
-    #add_btn:hover{
-        background-color: var(--quarternary-color);
-        border: 1px solid transparent;
-        color: var(--secondary-color);
+    .shopping_container button{
+        margin: 0;
     }
 
     .shopping_container{
-        padding-top: 10px;
         transition: .2s opacity;
     }
 
