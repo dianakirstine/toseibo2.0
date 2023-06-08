@@ -246,40 +246,76 @@
         padding: 0px 37px;
         position: absolute;
         top: 50%;
-        left: 60%;
-        transform: translate(-60%, -50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         animation: fadein ease-in 2s forwards;
-    }
-
-    .video_content p{
-        text-align: center;
-    }
-
-    .video_content img{
-        width: 150px;
     }
 
     .video_content p{
         color: var(--secondary-color);
     }
 
-/*Ikon (close)*/
-/*Der er tilføjet en css animation. Kilde: https://www.w3schools.com/css/css3_animations.asp*/
-    .closeicon_landing_page{
-        display: flex;
-        width: 16px;
-        height: 16px;
-        cursor: pointer;
-        padding: 24px 36px;
-        animation: slidein ease-in 1.5s forwards; 
+    .video_content img{
+        width: 150px;
     }
 
-    @keyframes slidein{
-        from{
-            transform: translateX(-100%);
+/*Styling af knap i landing page*/
+/*Der er tilføjet en css animation. Kilde: https://www.w3schools.com/css/css3_animations.asp*/
+    .landing_page_button{
+        display: flex;
+        position: absolute;
+        top: 90%;
+        left: 53%;
+        transform: translate(-50%, -90%);
+        animation: fadein ease-in 2s forwards;
+        
+    }
+
+    .landing_page_button_context{
+        padding: 8px 0px 0px 8px;
+        text-decoration: none;
+        font-family: var(--second-font-set);
+        color: var(--secondary-color);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .material-symbols-sharp{
+        color: #fff;
+        animation: bouncing ease 4s infinite;
+        font-size: 35px !important;
+        cursor: pointer;
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 100,
+        'GRAD' 0,
+        'opsz' 48
+    }
+
+
+    @keyframes bouncing{
+        0%{
+            transform: translateX(0);
         }
 
-        to{
+        5%{
+            transform: translateX(5px);
+        }
+
+        10%{
+            transform: translateX(0);
+        }
+
+        15%{
+            transform: translateX(5px);
+        }
+
+        20%{
+            transform: translateX(0px);
+        }
+
+        100%{
             transform: translateX(0);
         }
     }
@@ -1020,10 +1056,19 @@
         width: 250px;
     }
 
-    .closeicon_landing_page{
-        width: 18px;
-        height: 18px;
-        padding: 24px 60px;
+/*Styling af knap i landing page*/
+    .landing_page_button{
+        left: 51%;
+        transform: translate(-51%, -90%);
+    }
+
+    .landing_page_button_context{
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .material-symbols-sharp{
+        font-size: 36px !important;
     }
 
 
@@ -1642,7 +1687,6 @@
 
 
 @media screen and (min-width: 1366px) {
-
 /*FORSIDE*/
 
 /*Styling til trejde sektion: Udforsk håndlavet keramik*/
@@ -1805,6 +1849,18 @@
         padding: 12px 22px 12px 17px;
         font-size: 15px;
     }
+
+
+/*LANDING VIDEO*/
+
+/*Styling af knap i landing page*/
+.landing_page_button_context{
+    font-size: 15px;
+}
+
+.material-symbols-sharp{
+    font-size: 38px !important;
+}
 
 
 /*FORSIDE*/
