@@ -211,6 +211,27 @@
     }
 
 
+/*BRØDKRUMMESTI*/
+
+    .breadcrumbs{
+        margin: 75px 0px 0px 37px;
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumbs a{
+        font-style: var(--font-set);
+        color: var(--tertiary-color);
+        font-size: 12px;
+    }
+
+    .breadcrumbs .material-symbols-sharp{
+        animation: none;
+        color: var(--tertiary-color);
+        font-size: 24px !important;
+    }
+
+
 /*LANDINGVIDEO*/
 
 /*Der er tilføjet en css animation. Kilde: https://www.w3schools.com/css/css3_animations.asp*/
@@ -293,7 +314,6 @@
         'opsz' 48
     }
 
-
     @keyframes bouncing{
         0%{
             transform: translateX(0);
@@ -330,7 +350,7 @@
 
     .frontpage_video{
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         object-fit: cover;
         filter: brightness(0.90);
         animation: fadein ease-in 1.5s forwards;
@@ -457,7 +477,7 @@
 
 /*Styling af første sektion: Bag Toseibo*/
     .about_1{
-        margin: 100px 37px;
+        margin: 20px 37px 100px 37px;
     }
 
     .about_1_img1{
@@ -518,7 +538,7 @@
 /*SHOP*/
 
     .wrapper{
-        margin: 100px 37px;
+        margin: 0px 37px;
     }
 
     .shop_img{
@@ -547,6 +567,22 @@
         border: 0.5px solid var(--secondary-color);
     }
 
+    .hr_shop_1{
+        width: 90%;
+    }
+
+    .hr_shop_2{
+        width: 65%;
+    }
+
+    .hr_shop_3{
+        width: 100%;
+    }
+
+    .hr_shop_4{
+        width: 50%;
+    }
+
     .shop_content p{
         position: absolute;
         left: 50%;
@@ -566,7 +602,7 @@
 
 /*Styling: first section*/
     .products_ceramic{
-        margin: 100px 37px;
+        margin: 20px 37px 100px 37px;
     }
 
     .products_ceramic img{
@@ -611,88 +647,99 @@
     /*Styling af tekster: placerer dem ovenpå billedet*/
     .dragon_1{
         position: relative;
+        
     }
 
     .dragon_2{
         position: relative;
+        padding-top: 10px;
     }
 
     .dragon_3{
         position: relative;
+        padding-top: 10px;
     }
 
     .dragon_4{
         position: relative;
+        padding-top: 10px;
     }
 
 
 /*DRAGON SCALE TEAPOT*/  
 
 /*Styling first section - KILDE: https://www.youtube.com/watch?v=McPdzhLRzCg*/
-.teapot_1{
-    margin: 100px 37px;
-  }
+    .teapot_1{
+        margin: 20px 37px 100px 37px;
+    }
 
-  .teapot_container{
-    margin-top: 100px;
-  }
+    .teapot_container{
+        margin-top: 50px;
+    }
+
+    .teapot_1_text hr{
+        width: 32%;
+    }
 
 /*Styling: CAROUSEL*/
-  .slider_wrapper{
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
+    .slider_wrapper{
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+    }
 
-  .slider{
-    display: flex;
-    aspect-ratio: 5 / 6;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    border: 1px solid #000;  
-    z-index: 1;
-  }
+    .slider{
+        display: flex;
+        aspect-ratio: 5 / 6;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        border: 1px solid #000;  
+        z-index: 1;
+    }
 
-  .slider img{
-    width: 100px;
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-    transition: all 0.2s;
-    overflow-x: hidden;
-  }
+    .slider img{
+        width: 100px;
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+        transition: all 0.2s;
+        overflow-x: hidden;
+    }
 
 /*CAROUSEL NAV BUTTONS*/
+
     .slider_nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    align-items: center;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        align-items: center;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
     }
 
     .slider_nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 100%;
-    background-color: var(--tertiary-color);
-    opacity: 0.50;
-    transition: opacity ease 250ms;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 100%;
+        background-color: var(--tertiary-color);
+        opacity: 0.50;
+        transition: opacity ease 250ms;
     }
 
     .slider_nav a:hover{
-    opacity: 1;
-    cursor: pointer;
+        opacity: 1;
+        cursor: pointer;
     }
 
 
 /*Styling: add to cart*/
-    .shopping_container button{
+    .shopping_container .button{
         margin: 0;
+        width: 60px;
+        padding: 10px 25px;
     }
 
     .shopping_container{
@@ -802,8 +849,8 @@
 
   .workshop_video{
         display: block;
-        width: 100vw;
-        height: 90vh;
+        width: 100%;
+        height: 88vh;
         object-fit: cover;
         filter: brightness(0.80);
         animation: fadein ease-in 1.5s forwards;
@@ -830,8 +877,7 @@
 
 /*Styling af anden sektion: Oplev kursus*/
   .workshop_2{
-        margin: 37px;
-        padding-bottom: 45px;
+    margin: 37px 37px 100px 37px;
     }
 
   .workshop_2_img{
@@ -852,7 +898,6 @@
 /*Styling af tredje sektion: Praktisk info*/
     .workshop_3{
         margin-top: 50px;
-        padding-bottom: 60px;
     }
 
     .workshop_3 h2{
@@ -875,7 +920,7 @@
 /*KONTAKT*/
 
     .contact-form{
-            margin: 100px 37px;
+        margin: 20px 37px 100px 37px;
     }
         
     form{
@@ -1042,6 +1087,21 @@
     }
 
     
+/*BRØDKRUMMESTI*/
+
+    .breadcrumbs{
+        margin: 70px 0px 0px 60px;
+    }
+
+    .breadcrumbs a{
+        font-size: 14px;
+    }
+
+    .breadcrumbs .material-symbols-sharp{
+        font-size: 32px !important;
+    }
+
+
 /*LANDING VIDEO*/
 
     .video_content img{
@@ -1074,6 +1134,7 @@
     .frontpage_video{
         right: 0;
         width: 100%;
+        height: 89vh;
     }
     
     .frontpage_1_content{
@@ -1188,7 +1249,7 @@
 
 /*Styling af første sektion: Bag Toseibo*/
     .about_1{
-        margin: 120px 160px;
+        margin: 40px 160px 150px 160px;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         gap: 20px;
@@ -1310,7 +1371,7 @@
     .shop_content{
         position: relative;
         width: 100%;
-        margin: 40px 0px 40px 60px;
+        margin: 0px 0px 40px 60px;
         flex-shrink: 0;
     }
 
@@ -1320,23 +1381,26 @@
         width: 100%;
         overflow-x: hidden;
         margin: 0;
+        height: 100vh;
     }
 
     .shop_img{
         width: 90vw;
-        height: 90vh;
+        height: 81.5vh;
     }
 
     .shop_text{
-        left: 10%;
-        width: 15%;
-        transform: translate(-10%, -10%);
+        top: 8%;
+        left: 8%;
+        width: 16%;
+        transform: translate(-8%, -8%);
         color: var(--secondary-color);
     }
 
     .shop_content p{
-        left: 10%;
-        transform: translate(-10%, -80%);
+        top: 65%;
+        left: 8%;
+        transform: translate(-8%, -65%);
         color: var(--secondary-color);
         width: 20%;
     }
@@ -1348,13 +1412,11 @@
         padding: 150px;
         text-align: center;
         position: relative;
-        min-height: 100%;
-        overflow: hidden;
     }
 
     .footer_container{
         position: absolute;
-        top: 15%;
+        top: 5%;
         right: 10%;
     }
 
@@ -1380,7 +1442,7 @@
 
 /*Styling: text section*/  
     .products_ceramic{
-        margin: 120px 60px;
+        margin: 40px 60px 150px 60px;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 20px;
@@ -1399,7 +1461,6 @@
         grid-column-end: 10;
         grid-row-start: 1;
         grid-row-end: 3;
-        
     }
 
     .dragon_2{
@@ -1407,7 +1468,7 @@
         grid-column-end: 13;
         grid-row-start: 2;
         grid-row-end: 3;
-        
+        padding: 0;
     }
 
     .dragon_3{
@@ -1415,6 +1476,7 @@
         grid-column-end: 8;
         grid-row-start: 3;
         grid-row-end: 4;
+        padding: 0;
     }
 
     .dragon_4{
@@ -1422,6 +1484,7 @@
         grid-column-end: 12;
         grid-row-start: 3;
         grid-row-end: 5;
+        padding: 0;
     }
 
     .intro_text hr{
@@ -1437,7 +1500,7 @@
 
 /*INTRO TEXT*/
     .teapot_1{
-        margin: 120px 160px;
+        margin: 40px 160px 150px 160px;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         gap: 20px;
@@ -1488,8 +1551,8 @@
 /*MORE PRODUCTS*/
     .shopping_container .button{
         padding: 8px 40px 8px 40px;
+        width: 80px;
     }
-
 
     .more_products{
         width: 100%;
@@ -1508,12 +1571,13 @@
 
 /*Styling af første sektion: hero video + tekst*/
     .workshop_1{
-        margin: 40px 60px;
+        margin: 0px 60px 150px 60px;
     }
 
     .workshop_video{
         right: 0;
         width: 100%;
+        height: 81.5vh;
     }
 
     .workshop_1 h1{
@@ -1526,7 +1590,7 @@
 
 /*Styling af anden sektion: Oplev kursus*/
     .workshop_2{
-        margin: 160px;
+        margin: 100px 160px;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         gap: 20px;
@@ -1575,11 +1639,11 @@
 /*Styling af linje og tekster*/
     .contact-form{
         display: flex;
-        margin: 120px 160px;
+        margin: 40px 160px 150px 160px;
     }
 
     .contact-text p{
-        margin-right: 250px;
+        margin-right: 220px;
     }
 
     .contact-form hr{
@@ -1709,6 +1773,24 @@
     }
 
 
+/*SHOP*/
+
+    .shop_text{
+        width: 15%;
+    }
+
+    .shop_img{
+        width: 91vw;
+    }
+
+
+/*PRODUCTS*/ 
+
+    .product_text{
+        width: 32%;
+    }
+
+
 /*DRAGON SCALE TEAPOT*/  
 
 /*INTRO TEXT*/
@@ -1727,6 +1809,7 @@
     .teapot_4{
         margin-top: 15%;
     }
+
 
 /*MORE PRODUCTS*/
     .more_img{
@@ -1780,6 +1863,17 @@
 /*Styling af tredje sektion: Fra den jordnære ler til de rige glasurer*/
     .about_3_content hr{
         width: 85%;
+    }
+
+
+/*SHOP*/
+
+    .shop_text{
+        width: 14%;
+    }
+
+    .shop_img{
+        width: 91.5vw;
     }
 
 
@@ -1891,6 +1985,17 @@
     }
 
 
+/*SHOP*/
+
+    .shop_text{
+        width: 13%;
+    }
+
+    .shop_img{
+        width: 92vw;
+    } 
+
+
 /*DRAGON SCALE TEAPOT*/  
 
 /*INTRO TEXT*/
@@ -1907,9 +2012,6 @@
     }
 
 /*MORE PRODUCTS*/
-    .shopping_container .button {
-        padding: 8px 60px 8px 60px;
-    }
 
     .more_img{
         width: 140px;
